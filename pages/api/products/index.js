@@ -1,5 +1,5 @@
 import dbConnect from "../../../utils/mongo";
-import Product from "../../../models/Product";
+import Product from "../../../models/product";
 export default async function handler(req, res) {
   const { method, cookies } = req;
   const token = cookies.token;
