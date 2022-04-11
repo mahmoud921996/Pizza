@@ -1,0 +1,44 @@
+.container {
+  padding: 50px;
+  display: flex;
+}
+
+.item {
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 20px;
+  text-align: left;
+}
+
+.button {
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.button:first-child {
+  background-color: #09c;
+  margin-right: 10px;
+}
+
+.button:last-child {
+  background-color: rgb(226, 17, 17);
+}
+
+.nextStage {
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #111;
+  border-radius: 4px;
+  background-color: #eee;
+}
