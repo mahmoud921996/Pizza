@@ -10,7 +10,7 @@ const ProductSchema = new mongoose.Schema(
     desc: {
       type: String,
       required: true,
-      maxlength: 200,
+      maxlength: 300,
     },
     img: {
       type: String,
@@ -32,5 +32,5 @@ const ProductSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.models.Product ||
-  mongoose.model("Product", ProductSchema);
+export default mongoose.models.Products ||
+  mongoose.model("Products", ProductSchema);
