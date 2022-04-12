@@ -1,7 +1,7 @@
 import axios from "axios";
 import Head from "next/head";
 import { useState } from "react";
-import Add from "../components/Add.js";
+import Add from "../components/Add";
 import AddButton from "../components/AddButton.js";
 import Featured from "../components/Featured.js";
 import PizzaList from "../components/PizzaList.js";
@@ -30,7 +30,13 @@ export const getServerSideProps = async ctx => {
   if (myCookie.token === process.env.TOKEN) {
     admin = true;
   }
-  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get(
+    `${
+      process.env.NODE_ENV === "production"
+        ? process.env.URL_PROD
+        : process.env.URL_DEV
+    }/api/products`
+  );
   return {
     props: {
       products: res.data,
